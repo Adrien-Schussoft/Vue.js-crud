@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -19,7 +18,6 @@
         </div>
     </div>
 </div>
-
     <div class="container">
         <div class="row mt-3">
             <div class="col-lg-6">
@@ -66,9 +64,6 @@
             </div>
         </div>
     </div>
-
-<!-- Tests -->
-
     <!-- Add New user Model -->
     <div class="modal fade" id="newUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -100,38 +95,37 @@
             </div>
         </div>
     </div>
-
-        <!-- Add Edit user Model -->
-        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editModalLabel">Edit User</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body font-size-md">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control form-control-lg" v-model="currentUser.name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control form-control-lg" v-model="currentUser.email">
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" name="phone" class="form-control form-control-lg" v-model="currentUser.phone">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-info btn-block btn-lg" @click="showEditModal=false;updateUser();clearMsg();">
-                                    Edit User
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+    <!-- Add Edit user Model -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body font-size-md">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control form-control-lg" v-model="currentUser.name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control form-control-lg" v-model="currentUser.email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control form-control-lg" v-model="currentUser.phone">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-info btn-block btn-lg" @click="showEditModal=false;updateUser();clearMsg();">
+                                Edit User
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Add Delete User Modal -->
     <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -154,54 +148,12 @@
             </div>
         </div>
     </div>
-
-    <!-- Add New user Model -->
-<!--
-   <div id="overlay" v-if="showAddModal">
-       <div class="modal-dialog">
-           <div class="modal-content"></div>
-           <div class="modal-header">
-               <h5 class="modal-title">Add New user</h5>
-               <button type="button" class="btn btn-danger close" @click="showAddModal=false">
-                   <span aria-hidden="true">&times;</span>
-               </button>
-           </div>
-           <div class="modal-body p-4">
-               <form action="#" method="post">
-                   <div class="form-group">
-                       <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" value="">
-                   </div>
-                   <div class="form-group">
-                       <input type="email" name="email" class="form-control form-control-lg" placeholder="E-Mail">
-                   </div>
-                   <div class="form-group">
-                       <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Phone">
-                   </div>
-                   <div class="form-group">
-                       <button class="btn btn-info btn-block btn-lg" @click="showAddModal=false">
-                           Add User
-                       </button>
-                   </div>
-               </form>
-           </div>
-       </div>
-   </div>
--->
-<!-- Fin overlay-->
-
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-<!--
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
--->
-
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
