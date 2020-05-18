@@ -139,7 +139,7 @@
                 </div>
                 <div class="modal-body font-size-md">
                     <h4 class="text-danger">Are you sure want to delete this user ?</h4>
-                    <h5>You are deleting 'machin'</h5>
+                    <h5>You are deleting {{ currentUser.name }}</h5>
                     <hr>
                     <button class="btn btn-danger btn-lg" data-dismiss="modal" @click="showDeleteModal=false;deleteUser();clearMsg();">Yes</button>
                     &nbsp;
