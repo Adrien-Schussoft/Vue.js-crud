@@ -37,7 +37,6 @@ var app = new Vue({
                 }
             });
         },
-
         updateUser(){
             var formData = app.toFormData(app.currentUser);
             axios.post("http://localhost/Vue_crud/process.php?action=update",formData).then(function(response) {
